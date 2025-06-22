@@ -9,15 +9,17 @@ body {
 }
 
 .typewriter-line {
-  font-size: 18px;
-  text-align: center;
-  margin: 16px 0 0 0;
-  color: #f9e499;
-  letter-spacing: 0.02em;
-  opacity: 0.99;
-  transition:
-    opacity 0.55s cubic-bezier(.32,2,.55,.27),
-    font-size 0.7s cubic-bezier(.65,1.35,.6,1);
-  max-width: 90vw;
-  word-break: break-word;
+    ext-align: center;
+    margin: 16px 0 0 0;
+    color: #a2ff8c;
+    letter-spacing: 0.02em;
+    opacity: 0.99;
+    transition: opacity 0.55s cubic-bezier(.32,2,.55,.27), font-size 0.7s cubic-bezier(.65,1.35,.6,1);
+    max-width: 90vw;
+    word-break: break-word;
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
+
