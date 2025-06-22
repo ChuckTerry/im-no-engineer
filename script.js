@@ -41,9 +41,10 @@ async function typeLine(array) {
   for (const string of array) {
     for (let index = 0; index < string.length; index++) {
       element.innerText += string[index];
-      if (Math.random() > 0.4) playClickSound();
-      const ms = Math.random() * 80;
-      await new Promise(resolve => setTimeout(resolve, ms));
+      if (Math.random() > 0.4) {
+        playClickSound();
+      }
+      await new Promise(resolve => setTimeout(resolve, Math.random() * 80));
     }
     
       await new Promise(resolve => setTimeout(resolve, 60 * Math.random()));
@@ -59,7 +60,7 @@ async function typeMessage(lineArray) {
   element.innerText = 'Please find a real engineer after visting!';
   element.className = 'typewriter-line';
   element.fontFamily = 'sans-serif';
-  element.color: '#FFFFFF';
+  element.color = '#FFFFFF';
   document.body.appendChild(element);
   await new Promise(resolve => setTimeout(resolve, 2550));
   location.href = 'https://chuckterry.me';
