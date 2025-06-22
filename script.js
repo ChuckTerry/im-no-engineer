@@ -23,7 +23,7 @@ function fader(element) {
   }
   const currentOpacity = parseFloat(element.style.opacity);
   element.style.opacity = currentOpacity ** 2;
-  element.style.fontSize = `${18 * currentOpacity}px`;
+  element.style.fontSize = `${36 * currentOpacity}px`;
   setTimeout(() => fader(element), 120);
 }
 
@@ -56,7 +56,10 @@ async function typeMessage(lineArray) {
     await new Promise(resolve => setTimeout(resolve, 950));
   }
   const element = document.createElement('p');
-  element.innerText = 'Please find a real engineer after visting!'
+  element.innerText = 'Please find a real engineer after visting!';
+  element.className = 'typewriter-line';
+  element.fontFamily = 'sans-serif';
+  element.color: '#FFFFFF';
   document.body.appendChild(element);
   await new Promise(resolve => setTimeout(resolve, 2550));
   location.href = 'https://chuckterry.me';
