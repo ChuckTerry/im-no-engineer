@@ -18,13 +18,13 @@ function playClickSound() {
 }
 
 function fader(element) {
-  if (element.style.opacity < 0.005) {
+  if (element.style.opacity < 0.01) {
     return element.remove();
   }
-  const currentOpacity = element.style.opacity;
+  const currentOpacity = parseFloat(element.style.opacity);
   element.style.opacity = currentOpacity ** 2;
-  element.style.fontSize = `${14 * currentOpacity}px`;
-  window.setTimeout(() => fader(element), 150)
+  element.style.fontSize = `${18 * currentOpacity}px`;
+  setTimeout(() => fader(element), 120);
 }
 
 async function typeLine(array) {
@@ -35,8 +35,8 @@ async function typeLine(array) {
   }
   const element = document.createElement('p');
   element.id = 'new-line';
+  element.className = 'typewriter-line';
   element.style.opacity = 0.99;
-  element.style.fontSize = '14px';
   document.body.appendChild(element);
   for (const string of array) {
     for (let index = 0; index < string.length; index++) {
