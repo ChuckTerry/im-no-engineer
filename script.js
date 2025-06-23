@@ -23,7 +23,7 @@ function fader(element) {
   }
   const currentOpacity = parseFloat(element.style.opacity);
   element.style.opacity = currentOpacity ** 2;
-  element.style.fontSize = `${36 * currentOpacity}px`;
+  element.style.fontSize = `${26 * currentOpacity}px`;
   setTimeout(() => fader(element), 120);
 }
 
